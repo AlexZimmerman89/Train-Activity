@@ -1,0 +1,107 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Train Schedule</title>
+
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+        integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css"
+        integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+    <!-- Custom fonts for this template -->
+    <link href="vendor/css/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <!-- <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.10/css/all.css" integrity="sha384-+d0P83n9kaQMCwj8F4RJB66tzIwOKmrdb46+porD/OvrJ+37WqIM7UoBtwHO6Nlg" crossorigin="anonymous"> -->
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet"
+        type="text/css">
+
+    <!-- Local CSS -->
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+
+<body>
+    <div class="container jumbo">
+        <div class="jumbotron">
+            <h1>Anytime Train Station</h1>
+            <p>Choo Choo. Chee Chee.</p>
+        </div>
+    </div>
+    <div class="container cBody">
+        <div class="panel panel-primary">
+            <div class="panel-heading">
+                <h3 class="panel-title">Current Train Schedule</h3>
+            </div>
+            <!-- Table -->
+            <div class="wrapper">
+                <table class="table" id="train-table">
+                    <thead>
+                        <tr>
+                            <th scope="col">Train Name</th>
+                            <th scope="col">Destination</th>
+                            <th scope="col">Frequency (min)</th>
+                            <th scope="col">Next Arrival</th>
+                            <th scope="col">Minutes Away</th>
+                        </tr>
+                    </thead>
+                </table>
+            </div>
+            <!-- Table End -->
+        </div>
+    </div>
+    <div class="container" id="Add-train">
+        <div class="panel panel-primary">
+            <div class="panel-heading">
+                <h3 class="panel-title">Add Train</h3>
+            </div>
+            <div class="panel-body">
+                <div class="form-group row">
+                    <div id="Name">
+                        <label for="train name">Train Name</label>
+                        <input class="form-control" id="train-name" type="text">
+                    </div>
+                    <div id="Destination">
+                        <label for="destination">Destination</label>
+                        <input class="form-control" id="train-destination" type="text">
+                    </div>
+                    <div id="Frequency">
+                        <label for="frequency">Frequency (min)</label>
+                        <input class="form-control" id="train-frequency" type="number" min="0" max="60">
+                    </div>
+                    <div id="Next Arrival">
+                        <label for="arrival">Arrival Time</label>
+                        <input class="form-control" id="train-arrival" type="time">
+                    </div>
+                    <button class="btn btn-primary" id="submit" type="submit">Submit</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+
+    <!-- Firebase -->
+    <script src="https://www.gstatic.com/firebasejs/5.9.0/firebase.js"></script>
+
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"
+        integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
+        crossorigin="anonymous"></script>
+
+    <!-- MomentJS -->
+    <script src="https://cdn.jsdelivr.net/momentjs/2.12.0/moment.min.js"></script>
+
+    <!-- Local JavaScript -->
+    <script src="assets/javascript/app.js"></script>
+</body>
+
+</html>
